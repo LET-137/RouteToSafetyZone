@@ -6,24 +6,40 @@
 //
 
 import XCTest
+@testable import RouteToSafetyZone
+
 
 final class RouteToSafetyZoneUITestsLaunchTests: XCTestCase {
-
+    var appDelegate: AppDelegate!
+    
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        try super.setUpWithError()
+        appDelegate = AppDelegate()
     }
-
+    
+    override func tearDownWithError() throws {
+        appDelegate = nil
+        try super.tearDownWithError()
+    }
+    
+//    アプリケーションの起動テスト
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()
 
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
+        func testDidFinishLaunchingWithOptions() throws {
+            let application = UIApplication.shared
+            let launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+            
+            let result = appDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
+            XCTAssertTrue(result, "アプリケーションの起動に失敗しました")
+        }
+        
         let attachment = XCTAttachment(screenshot: app.screenshot())
         attachment.name = "Launch Screen"
         attachment.lifetime = .keepAlways

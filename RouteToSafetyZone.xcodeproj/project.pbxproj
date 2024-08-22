@@ -19,6 +19,16 @@
 		C767E7862C75F6840057B0F9 /* RouteToSafetyZoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7852C75F6840057B0F9 /* RouteToSafetyZoneUITestsLaunchTests.swift */; };
 		C767E7942C75F6B90057B0F9 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7932C75F6B90057B0F9 /* GoogleMapView.swift */; };
 		C767E7972C75F7A60057B0F9 /* CoreLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7962C75F7A60057B0F9 /* CoreLocationModel.swift */; };
+		C796869A2C76C065009523F5 /* RouteToSafetyZoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7682C75F6820057B0F9 /* RouteToSafetyZoneApp.swift */; };
+		C796869D2C76C0C5009523F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E76A2C75F6820057B0F9 /* ContentView.swift */; };
+		C796869F2C76C467009523F5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D25FBB2C76106F00FD494A /* Keys.swift */; };
+		C79686A02C76C467009523F5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D25FBB2C76106F00FD494A /* Keys.swift */; };
+		C79686A12C76C46A009523F5 /* CoreLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7962C75F7A60057B0F9 /* CoreLocationModel.swift */; };
+		C79686A22C76C46C009523F5 /* CoreLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7962C75F7A60057B0F9 /* CoreLocationModel.swift */; };
+		C79686A32C76C46E009523F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E76A2C75F6820057B0F9 /* ContentView.swift */; };
+		C79686A52C76C473009523F5 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7932C75F6B90057B0F9 /* GoogleMapView.swift */; };
+		C79686A62C76C474009523F5 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7932C75F6B90057B0F9 /* GoogleMapView.swift */; };
+		C79686A82C76C482009523F5 /* RouteToSafetyZoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7682C75F6820057B0F9 /* RouteToSafetyZoneApp.swift */; };
 		C7D25FBC2C76106F00FD494A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D25FBB2C76106F00FD494A /* Keys.swift */; };
 /* End PBXBuildFile section */
 
@@ -451,6 +461,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C767E77A2C75F6840057B0F9 /* RouteToSafetyZoneTests.swift in Sources */,
+				C79686A62C76C474009523F5 /* GoogleMapView.swift in Sources */,
+				C79686A12C76C46A009523F5 /* CoreLocationModel.swift in Sources */,
+				C79686A32C76C46E009523F5 /* ContentView.swift in Sources */,
+				C79686A82C76C482009523F5 /* RouteToSafetyZoneApp.swift in Sources */,
+				C796869F2C76C467009523F5 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +474,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C767E7842C75F6840057B0F9 /* RouteToSafetyZoneUITests.swift in Sources */,
+				C79686A22C76C46C009523F5 /* CoreLocationModel.swift in Sources */,
+				C796869A2C76C065009523F5 /* RouteToSafetyZoneApp.swift in Sources */,
+				C796869D2C76C0C5009523F5 /* ContentView.swift in Sources */,
+				C79686A52C76C473009523F5 /* GoogleMapView.swift in Sources */,
 				C767E7862C75F6840057B0F9 /* RouteToSafetyZoneUITestsLaunchTests.swift in Sources */,
+				C79686A02C76C467009523F5 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +732,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4H5MS236CS;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.137.6300.bjs.RouteToSafetyZoneUITests;
@@ -731,6 +752,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4H5MS236CS;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.137.6300.bjs.RouteToSafetyZoneUITests;
