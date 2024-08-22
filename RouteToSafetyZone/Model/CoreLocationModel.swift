@@ -3,11 +3,12 @@ import SwiftUI
 import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private var locationManager = CLLocationManager()
+    private var locationManager: CLLocationManager
     @Published var location: CLLocation?
     @Published var status: CLAuthorizationStatus?
     
-    override init() {
+    init(locationManager: CLLocationManager = CLLocationManager()) {
+        self.locationManager = locationManager
         super.init()
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
@@ -15,7 +16,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
 //    位置情報の更新時に呼ばれる
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManagerDidUpdata(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.location = location
     }

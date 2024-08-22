@@ -6,31 +6,65 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import RouteToSafetyZone
 
 final class RouteToSafetyZoneTests: XCTestCase {
-
+    var locationManager: CLLocationManagerDelegate!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        locationManager = LocationManager()
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        locationManager = nil
+        try super.tearDownWithError()
     }
-
+    
+    //    位置情報の許可を設定するモック
+    class MockCLLocationManager: CLLocationManager {
+        //        位置情報取得を許可しないように設定
+        var mockAuthorizationStatus: CLAuthorizationStatus = .notDetermined
+        override var authorizationStatus: CLAuthorizationStatus {
+            return mockAuthorizationStatus
+        }
+    }
+    
+    //    MockCLLocatinoManagerを使用して、位置情報許可の更新をテスト
+    func testLocationManagerDidChangeAuthorization() {
+        let mockCLLocationManager = MockCLLocationManager()
+        //      フォアグラウンド時に位置情報を許可に設定
+        mockCLLocationManager.mockAuthorizationStatus = .authorizedWhenInUse
+        let locationManager = LocationManager(locationManager: mockCLLocationManager)
+        
+        //      locationManagerDidChangeAuthorizationがauthorizedWhenInUseを返すか？
+        locationManager.locationManagerDidChangeAuthorization(mockCLLocationManager)
+        XCTAssertEqual(locationManager.status, .authorizedWhenInUse)
+    }
+    
+    //    位置情報テスト
+    func testLocationManagerDidUpdata() {
+        let mockLocationManager = MockCLLocationManager()
+        let locationManager = LocationManager(locationManager: mockLocationManager)
+        //      ダミーの位置情報をdummyLocationに格納（東京駅を指定）
+        let dummyLocation = CLLocation(latitude: 24.2867, longitude: 153.9807)
+        
+        //      dummyLocationの位置情報を返すかテスト
+        locationManager.locationManagerDidUpdata(mockLocationManager, didUpdateLocations: [dummyLocation])
+        XCTAssertEqual(locationManager.location?.coordinate.latitude, 24.2867)
+        XCTAssertEqual(locationManager.location?.coordinate.longitude, 153.9807)
+    }
+    
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }
