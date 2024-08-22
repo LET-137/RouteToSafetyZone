@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081242B3048ABAFF24918CDA /* Pods_RouteToSafetyZone_RouteToSafetyZoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3586A5BE625D9AF9EFFE32F7 /* Pods_RouteToSafetyZone_RouteToSafetyZoneUITests.framework */; };
+		6116ECE28394B4EC670BF574 /* Pods_RouteToSafetyZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0D39ECB4ED0190A66D4BEE /* Pods_RouteToSafetyZone.framework */; };
+		62F5C950FF3F7C8583AF72B9 /* Pods_RouteToSafetyZoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E5385B1C7F744761475487 /* Pods_RouteToSafetyZoneTests.framework */; };
 		C767E7692C75F6820057B0F9 /* RouteToSafetyZoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7682C75F6820057B0F9 /* RouteToSafetyZoneApp.swift */; };
 		C767E76B2C75F6820057B0F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E76A2C75F6820057B0F9 /* ContentView.swift */; };
 		C767E76D2C75F6840057B0F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C767E76C2C75F6840057B0F9 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 		C767E77A2C75F6840057B0F9 /* RouteToSafetyZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7792C75F6840057B0F9 /* RouteToSafetyZoneTests.swift */; };
 		C767E7842C75F6840057B0F9 /* RouteToSafetyZoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7832C75F6840057B0F9 /* RouteToSafetyZoneUITests.swift */; };
 		C767E7862C75F6840057B0F9 /* RouteToSafetyZoneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7852C75F6840057B0F9 /* RouteToSafetyZoneUITestsLaunchTests.swift */; };
+		C767E7942C75F6B90057B0F9 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7932C75F6B90057B0F9 /* GoogleMapView.swift */; };
+		C767E7972C75F7A60057B0F9 /* CoreLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E7962C75F7A60057B0F9 /* CoreLocationModel.swift */; };
+		C7D25FBC2C76106F00FD494A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D25FBB2C76106F00FD494A /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F0D39ECB4ED0190A66D4BEE /* Pods_RouteToSafetyZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouteToSafetyZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1159E5E863EDC5D1323F49DA /* Pods-RouteToSafetyZoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteToSafetyZoneTests.debug.xcconfig"; path = "Target Support Files/Pods-RouteToSafetyZoneTests/Pods-RouteToSafetyZoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		255085CD58CF55CDF5B0E0C4 /* Pods-RouteToSafetyZoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteToSafetyZoneTests.release.xcconfig"; path = "Target Support Files/Pods-RouteToSafetyZoneTests/Pods-RouteToSafetyZoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		2932B458C7D42FD7EB41D2E2 /* Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2BB2F43E9AF369AB83CE26FE /* Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.release.xcconfig"; path = "Target Support Files/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3586A5BE625D9AF9EFFE32F7 /* Pods_RouteToSafetyZone_RouteToSafetyZoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouteToSafetyZone_RouteToSafetyZoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF5C76152E351BE84C799A2 /* Pods-RouteToSafetyZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteToSafetyZone.release.xcconfig"; path = "Target Support Files/Pods-RouteToSafetyZone/Pods-RouteToSafetyZone.release.xcconfig"; sourceTree = "<group>"; };
+		B0131D399A4188188AAAE51D /* Pods-RouteToSafetyZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteToSafetyZone.debug.xcconfig"; path = "Target Support Files/Pods-RouteToSafetyZone/Pods-RouteToSafetyZone.debug.xcconfig"; sourceTree = "<group>"; };
+		B5E5385B1C7F744761475487 /* Pods_RouteToSafetyZoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouteToSafetyZoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C767E7652C75F6820057B0F9 /* RouteToSafetyZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteToSafetyZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C767E7682C75F6820057B0F9 /* RouteToSafetyZoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteToSafetyZoneApp.swift; sourceTree = "<group>"; };
 		C767E76A2C75F6820057B0F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +59,9 @@
 		C767E77F2C75F6840057B0F9 /* RouteToSafetyZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouteToSafetyZoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C767E7832C75F6840057B0F9 /* RouteToSafetyZoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteToSafetyZoneUITests.swift; sourceTree = "<group>"; };
 		C767E7852C75F6840057B0F9 /* RouteToSafetyZoneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteToSafetyZoneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C767E7932C75F6B90057B0F9 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
+		C767E7962C75F7A60057B0F9 /* CoreLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationModel.swift; sourceTree = "<group>"; };
+		C7D25FBB2C76106F00FD494A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6116ECE28394B4EC670BF574 /* Pods_RouteToSafetyZone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F5C950FF3F7C8583AF72B9 /* Pods_RouteToSafetyZoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +85,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081242B3048ABAFF24918CDA /* Pods_RouteToSafetyZone_RouteToSafetyZoneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5580926EE4293537CFAD2ABA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F0D39ECB4ED0190A66D4BEE /* Pods_RouteToSafetyZone.framework */,
+				3586A5BE625D9AF9EFFE32F7 /* Pods_RouteToSafetyZone_RouteToSafetyZoneUITests.framework */,
+				B5E5385B1C7F744761475487 /* Pods_RouteToSafetyZoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		612A25D28356D3ABC002248A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0131D399A4188188AAAE51D /* Pods-RouteToSafetyZone.debug.xcconfig */,
+				3CF5C76152E351BE84C799A2 /* Pods-RouteToSafetyZone.release.xcconfig */,
+				2932B458C7D42FD7EB41D2E2 /* Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.debug.xcconfig */,
+				2BB2F43E9AF369AB83CE26FE /* Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.release.xcconfig */,
+				1159E5E863EDC5D1323F49DA /* Pods-RouteToSafetyZoneTests.debug.xcconfig */,
+				255085CD58CF55CDF5B0E0C4 /* Pods-RouteToSafetyZoneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C767E75C2C75F6820057B0F9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +122,8 @@
 				C767E7782C75F6840057B0F9 /* RouteToSafetyZoneTests */,
 				C767E7822C75F6840057B0F9 /* RouteToSafetyZoneUITests */,
 				C767E7662C75F6820057B0F9 /* Products */,
+				612A25D28356D3ABC002248A /* Pods */,
+				5580926EE4293537CFAD2ABA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				C767E7682C75F6820057B0F9 /* RouteToSafetyZoneApp.swift */,
-				C767E76A2C75F6820057B0F9 /* ContentView.swift */,
+				C7D25FBA2C76105700FD494A /* Keys */,
+				C767E7952C75F7850057B0F9 /* Model */,
+				C767E7922C75F6A10057B0F9 /* Views */,
 				C767E76C2C75F6840057B0F9 /* Assets.xcassets */,
 				C767E76E2C75F6840057B0F9 /* Preview Content */,
 			);
@@ -127,6 +175,31 @@
 			path = RouteToSafetyZoneUITests;
 			sourceTree = "<group>";
 		};
+		C767E7922C75F6A10057B0F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C767E76A2C75F6820057B0F9 /* ContentView.swift */,
+				C767E7932C75F6B90057B0F9 /* GoogleMapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C767E7952C75F7850057B0F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C767E7962C75F7A60057B0F9 /* CoreLocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7D25FBA2C76105700FD494A /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				C7D25FBB2C76106F00FD494A /* Keys.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C767E7892C75F6840057B0F9 /* Build configuration list for PBXNativeTarget "RouteToSafetyZone" */;
 			buildPhases = (
+				B2FD1E3F5CB5EF11EB04A89C /* [CP] Check Pods Manifest.lock */,
 				C767E7612C75F6820057B0F9 /* Sources */,
 				C767E7622C75F6820057B0F9 /* Frameworks */,
 				C767E7632C75F6820057B0F9 /* Resources */,
+				BDB0308DAB1131855D7BB0BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C767E78C2C75F6840057B0F9 /* Build configuration list for PBXNativeTarget "RouteToSafetyZoneTests" */;
 			buildPhases = (
+				0B010C861A0D92CD9512BFE3 /* [CP] Check Pods Manifest.lock */,
 				C767E7712C75F6840057B0F9 /* Sources */,
 				C767E7722C75F6840057B0F9 /* Frameworks */,
 				C767E7732C75F6840057B0F9 /* Resources */,
@@ -169,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C767E78F2C75F6840057B0F9 /* Build configuration list for PBXNativeTarget "RouteToSafetyZoneUITests" */;
 			buildPhases = (
+				2740D43501622FDD10E3A90A /* [CP] Check Pods Manifest.lock */,
 				C767E77B2C75F6840057B0F9 /* Sources */,
 				C767E77C2C75F6840057B0F9 /* Frameworks */,
 				C767E77D2C75F6840057B0F9 /* Resources */,
+				666B37715B53E86E6A7B3F31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,13 +330,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B010C861A0D92CD9512BFE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RouteToSafetyZoneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2740D43501622FDD10E3A90A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		666B37715B53E86E6A7B3F31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests/Pods-RouteToSafetyZone-RouteToSafetyZoneUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2FD1E3F5CB5EF11EB04A89C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RouteToSafetyZone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDB0308DAB1131855D7BB0BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RouteToSafetyZone/Pods-RouteToSafetyZone-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RouteToSafetyZone/Pods-RouteToSafetyZone-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RouteToSafetyZone/Pods-RouteToSafetyZone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C767E7612C75F6820057B0F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C767E76B2C75F6820057B0F9 /* ContentView.swift in Sources */,
+				C767E7972C75F7A60057B0F9 /* CoreLocationModel.swift in Sources */,
+				C767E7942C75F6B90057B0F9 /* GoogleMapView.swift in Sources */,
 				C767E7692C75F6820057B0F9 /* RouteToSafetyZoneApp.swift in Sources */,
+				C7D25FBC2C76106F00FD494A /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +600,7 @@
 		};
 		C767E78A2C75F6840057B0F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0131D399A4188188AAAE51D /* Pods-RouteToSafetyZone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,7 +609,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RouteToSafetyZone/Preview Content\"";
 				DEVELOPMENT_TEAM = 4H5MS236CS;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app acquires your current location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +632,7 @@
 		};
 		C767E78B2C75F6840057B0F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CF5C76152E351BE84C799A2 /* Pods-RouteToSafetyZone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -453,7 +641,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RouteToSafetyZone/Preview Content\"";
 				DEVELOPMENT_TEAM = 4H5MS236CS;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app acquires your current location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -474,6 +664,7 @@
 		};
 		C767E78D2C75F6840057B0F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1159E5E863EDC5D1323F49DA /* Pods-RouteToSafetyZoneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +685,7 @@
 		};
 		C767E78E2C75F6840057B0F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 255085CD58CF55CDF5B0E0C4 /* Pods-RouteToSafetyZoneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +706,7 @@
 		};
 		C767E7902C75F6840057B0F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2932B458C7D42FD7EB41D2E2 /* Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +725,7 @@
 		};
 		C767E7912C75F6840057B0F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB2F43E9AF369AB83CE26FE /* Pods-RouteToSafetyZone-RouteToSafetyZoneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
