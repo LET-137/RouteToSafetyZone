@@ -51,7 +51,7 @@ final class RouteToSafetyZoneTests: XCTestCase {
         let dummyLocation = CLLocation(latitude: 24.2867, longitude: 153.9807)
         
         //      dummyLocationの位置情報を返すかテスト
-        locationManager.locationManagerDidUpdata(mockLocationManager, didUpdateLocations: [dummyLocation])
+        locationManager.locationManager(mockLocationManager, didUpdateLocations: [dummyLocation])
         XCTAssertEqual(locationManager.location?.coordinate.latitude, 24.2867)
         XCTAssertEqual(locationManager.location?.coordinate.longitude, 153.9807)
     }
