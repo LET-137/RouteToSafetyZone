@@ -9,21 +9,32 @@ struct GoogleMapView: UIViewControllerRepresentable {
     var latitude: CLLocationDegrees
     var longitude: CLLocationDegrees
     var zoom: Float = 12.0
-
-//    マップのカメラを移動し終えた位置に、マップ画面を固定
+    
+    //    GMSMapViewDelegate
     class Coodinator: NSObject, GMSMapViewDelegate {
         var parent: GoogleMapView
         
         init(parent: GoogleMapView) {
             self.parent = parent
         }
-        
+        //    マップのカメラを移動し終えた位置に、マップ画面を固定
         func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
             let center = mapView.projection.coordinate(for: mapView.center)
             parent.centerCoodinate = center
         }
+        //        マップをタップした時にピンを打つ
+        func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+            mapView.clear()
+            let marker = GMSMarker(position: coordinate)
+            marker.title = "目的地"
+            marker.appearAnimation = .fadeIn
+            marker.map = mapView
+        }
     }
     
+    func makeCoordinator() -> Coodinator {
+        return Coodinator(parent: self)
+    }
     
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = UIViewController()
@@ -31,6 +42,7 @@ struct GoogleMapView: UIViewControllerRepresentable {
         let mapView = GMSMapView()
         mapView.isMyLocationEnabled = true
         mapView.camera = camera
+        mapView.delegate = context.coordinator
         viewController.view = mapView
         return viewController
     }
@@ -40,15 +52,5 @@ struct GoogleMapView: UIViewControllerRepresentable {
         let cameraUpdata = GMSCameraUpdate.setTarget(location, zoom: zoom)
         let mapView = GMSMapView()
         mapView.animate(with: cameraUpdata)
-    }
-    
-    func addMarker(mapView: GMSMapView) -> GMSMarker {
-        mapView.clear()
-        let marker = GMSMarker()
-        guard let location = locationManager.userLocation else { return marker }
-        marker.position = location
-        marker.title = "現在地"
-        marker.map = mapView
-        return marker
     }
 }

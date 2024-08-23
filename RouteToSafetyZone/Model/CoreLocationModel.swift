@@ -21,10 +21,12 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
 //    位置情報の更新時に呼ばれる
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        DispatchQueue.main.async {
-            self.location = location
-            self.userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        Task {
+            guard let location = locations.last else { return }
+            DispatchQueue.main.async {
+                self.location = location
+                self.userLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            }
         }
     }
     

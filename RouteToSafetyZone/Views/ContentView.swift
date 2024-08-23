@@ -10,11 +10,12 @@ struct ContentView: View {
     var body: some View {
         if let location = locationManager.location {
             
-            GoogleMapView(centerCoodinate: $centerCoodinate, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 12.0)
+            GoogleMapView(centerCoodinate: $centerCoodinate, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 17.0)
                 .edgesIgnoringSafeArea(.all)
           
             Text("緯度: \(location.coordinate.latitude)")
-            Text("軽度: \(location.coordinate.longitude)")
+            Text("経度: \(location.coordinate.longitude)")
+            Text("海抜: \(String(format: "%.1f", location.altitude))m")
         } else {
             Text("現在値を取得中")
         }
