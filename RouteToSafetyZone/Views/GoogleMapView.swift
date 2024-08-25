@@ -6,6 +6,7 @@ struct GoogleMapView: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
     @EnvironmentObject var locationManager: LocationManager
     @Binding var centerCoodinate: CLLocationCoordinate2D
+    
     var latitude: CLLocationDegrees
     var longitude: CLLocationDegrees
     var zoom: Float = 12.0
@@ -48,9 +49,37 @@ struct GoogleMapView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        guard let location = locationManager.userLocation else { return }
-        let cameraUpdata = GMSCameraUpdate.setTarget(location, zoom: zoom)
         let mapView = GMSMapView()
-        mapView.animate(with: cameraUpdata)
     }
+    
+    //    DirectionAPIリクエストのURLを生成
+    func fetchDirectionURL(destination: CLLocationCoordinate2D) async throws -> String {
+        if let originLatitube = locationManager.location?.coordinate.latitude,
+           let originLongitube = locationManager.location?.coordinate.longitude {
+            let originString = CLLocation(latitude: originLatitube, longitude: originLongitube)
+            let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(originString)&destination=\(destination)&$mode=driving$key=\(googleMapAPIKey)"
+            return urlString
+        }
+        return ""
+    }
+    
+    //    GMSPathを取得する
+    func fetchDirectionPath(url: String) async throws -> GMSPath?{
+        guard let url = URL(string: url) else { return nil }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+           let routes = json["routes"] as? [[String: Any]],
+           let overview_polyline = routes.first?["overview_polyline"] as? [String: Any],
+           let points = overview_polyline["points"] as? String {
+            
+            if let path = GMSPath(fromEncodedPath: points){
+                return path
+            }
+            return nil
+        }
+        return nil
+    }    
 }

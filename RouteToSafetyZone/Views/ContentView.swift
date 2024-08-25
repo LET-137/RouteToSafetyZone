@@ -6,7 +6,6 @@ struct ContentView: View {
     @StateObject var locationManager = LocationManager()
     @State private var centerCoodinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     
-    
     var body: some View {
         if let location = locationManager.location {
             
