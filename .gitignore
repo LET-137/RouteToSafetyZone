@@ -6,6 +6,7 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 Keys/
+GoogleMaps.bundle/
 
 # ビルドプロダクト
 build/

@@ -10,7 +10,7 @@ import CoreLocation
 @testable import RouteToSafetyZone
 
 final class RouteToSafetyZoneTests: XCTestCase {
-    var locationManager: CLLocationManagerDelegate!
+    private var locationManager: CLLocationManagerDelegate!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
@@ -44,17 +44,25 @@ final class RouteToSafetyZoneTests: XCTestCase {
     }
     
     //    位置情報テスト
-    func testLocationManagerDidUpdata() {
+    func testLocationManager() {
         let mockLocationManager = MockCLLocationManager()
         let locationManager = LocationManager(locationManager: mockLocationManager)
-        //      ダミーの位置情報をdummyLocationに格納（東京駅を指定）
-        let dummyLocation = CLLocation(latitude: 24.2867, longitude: 153.9807)
         
+        let expectation = XCTestExpectation(description: "位置情報を更新させる")
+        let dummyLocation = CLLocation(latitude: 35.681236, longitude: 139.767125) //  ダミーの位置情報を格納（東京駅を指定）
         //      dummyLocationの位置情報を返すかテスト
         locationManager.locationManager(mockLocationManager, didUpdateLocations: [dummyLocation])
-        XCTAssertEqual(locationManager.location?.coordinate.latitude, 24.2867)
-        XCTAssertEqual(locationManager.location?.coordinate.longitude, 153.9807)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            XCTAssertEqual(locationManager.location?.coordinate.latitude, dummyLocation.coordinate.latitude)
+            XCTAssertEqual(locationManager.location?.coordinate.longitude, dummyLocation.coordinate.longitude)
+            
+            XCTAssertEqual(locationManager.userLocation?.latitude, dummyLocation.coordinate.latitude)
+            XCTAssertEqual(locationManager.userLocation?.longitude, dummyLocation.coordinate.longitude)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1.0)
     }
+    
     
     func testExample() throws {
         
